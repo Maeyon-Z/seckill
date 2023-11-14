@@ -23,7 +23,20 @@ package com.zzz.seckill.domain.constants;
  * @copyright 公众号: 冰河技术
  */
 public class SeckillConstants {
+    /**
+     * LUA脚本商品库存不存在
+     */
+    public static final int LUA_RESULT_GOODS_STOCK_NOT_EXISTS = -1;
 
+    /**
+     * LUA脚本要扣减的商品数量小于等于0
+     */
+    public static final int LUA_RESULT_GOODS_STOCK_PARAMS_LT_ZERO = -2;
+
+    /**
+     * LUA脚本库存不足
+     */
+    public static final int LUA_RESULT_GOODS_STOCK_LT_ZERO = -3;
     /**
      * 商品key前缀
      */
