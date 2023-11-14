@@ -127,4 +127,15 @@ public class RedisCacheService implements DistributedCacheService {
     public RedisTemplate<String, Object> getRedisTemplate() {
         return redisTemplate;
     }
+
+    @Override
+    public Long decrement(String key, long delta) {
+        return redisTemplate.opsForValue().decrement(key, delta);
+    }
+
+    @Override
+    public Long increment(String key, long delta) {
+        return redisTemplate.opsForValue().increment(key, delta);
+    }
+
 }
